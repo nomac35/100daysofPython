@@ -1,0 +1,26 @@
+
+
+####COUNTER######
+import collections
+# used to find how many recurring items in a
+
+n = ['red', 'blue', 'red', 'green', 'blue', 'blue']
+
+tally = collections.Counter(n)
+print(tally)
+
+
+#######Dictionaries########
+dict = { "alper":30, "bob":45 }
+keys = dict.keys()
+values = dict.values()
+
+Convert to list:
+
+list = list(dict.items())
+
+Looping:
+for k,v in dict.items():
+    print(k,v)
+    
+  
