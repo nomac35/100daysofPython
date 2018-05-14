@@ -23,4 +23,40 @@ Looping:
 for k,v in dict.items():
     print(k,v)
     
-  
+## random.sample(list,2) ==> chooses 2 from list
+
+###Comprehansions####
+
+for directory:
+This is the general template you can follow for dictionary comprehension in Python:
+
+dict_variable = {key:value for (key,value) in dictonary.items()}
+
+
+### GENERATORS ###
+A generator is a function that returns an iterator.
+It generates values using the yield keyword, when called with next() (a for loop does this implicitly),
+and it raises a StopIteration exception when there are no more values to generate.
+
+def num_gen():
+    for i in range(5):
+        yield(i)
+
+gen = num_gen()
+print(next(gen))
+
+**the iterator will raise a StopIteration exception, which ends the iterator.
+
+This is the list comprehension equivalent of generators. It works exactly in the same way as a list comprehension, but the expression is surrounded with () as opposed to [].
+
+The following expression can replace our generator function above:
+
+primes = (i for i in range(2, 100000000000) if check_prime(i))
+print(primes)
+for x in primes:
+    print(x)
+
+## itertool ##
+good for looping generators
+import itertools
+itertools.islice(list,5)
